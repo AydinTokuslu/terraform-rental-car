@@ -1,6 +1,6 @@
 server {
     listen 80;
-    server_name ${DOMAIN_NAME} www.${DOMAIN_NAME};
+    server_name ${DOMAIN_NAME} rental.${DOMAIN_NAME};
 
     # SSL yapılandırması buraya eklenecek
 
