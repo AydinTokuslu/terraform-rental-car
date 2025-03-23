@@ -28,10 +28,6 @@ variable "db_subnet_b_us_east_1b_id" {
   default = "subnet-02e03d4e817961ffc"
 }
 
-# variable "rds_endpoint" {
-#   description = "RDS veritabani endpoint adresi"
-#   type        = string
-# }
 variable "domain" {
   default = "rental.devopsaydintokuslu.de"
   type    = string

@@ -1,6 +1,3 @@
-
-
-
 resource "aws_cloudfront_distribution" "alb" {
   origin {
     domain_name = aws_lb.rental-lb.dns_name
@@ -45,14 +42,6 @@ resource "aws_cloudfront_distribution" "alb" {
     }
   }
 
-
-#     viewer_certificate {
-#       cloudfront_default_certificate = false
-#       acm_certificate_arn = data.aws_acm_certificate.issued.id
-#       minimum_protocol_version = "TLSv1.1_2016"
-#       ssl_support_method = "sni-only"
-#   }
-
     viewer_certificate {
         #cloudfront_default_certificate = true
         acm_certificate_arn = "arn:aws:acm:us-east-1:600627361541:certificate/0c6d032e-b610-46ea-a9e6-ec0d0f39dccc"
@@ -60,9 +49,3 @@ resource "aws_cloudfront_distribution" "alb" {
     }
 
 }
-
-# data "aws_acm_certificate" "issued" {
-#   domain   = "*.devopsaydintokuslu.de"
-#   #statuses = ["ISSUED"]
-#   #provider = aws.virginia
-# }

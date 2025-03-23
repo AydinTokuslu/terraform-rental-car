@@ -5,12 +5,10 @@ resource "aws_launch_template" "my_launch_template" {
   instance_type = var.instance_type
 
   depends_on = [aws_db_instance.my-database-server] # Önce DB oluşsun
-  #depends_on = [github_repository_file.dbendpoint]
+  
   vpc_security_group_ids = [ aws_security_group.rental-secgrp.id ]
   key_name = var.instance_keypair
   user_data = filebase64("${path.module}/userdata.sh")
-  #user_data = templatefile("${path.module}/userdata.sh", { rds_endpoint = "${var.rds_endpoint}" })
-  
 
   tag_specifications {
     resource_type = "instance"

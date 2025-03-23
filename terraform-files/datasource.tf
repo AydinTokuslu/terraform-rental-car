@@ -18,7 +18,6 @@ data "aws_vpc" "default" {
   default = true
 }
 
-# Get all default subnets for the default VPC
 data "aws_subnets" "default" {
   filter {
     name   = "vpc-id"
