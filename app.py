@@ -27,7 +27,7 @@ logging.basicConfig(
     format='%(asctime)s %(levelname)s: %(message)s'
 )
 
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'gizli-anahtar-buraya')
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'i2^$(%im!!)@lwenn9nk40%yo')
 app.config['UPLOAD_FOLDER'] = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static', 'images')
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 16MB max-limit
 
